@@ -74,7 +74,7 @@ namespace GsbRapports
             List<Rapport> rapportList = JsonConvert.DeserializeObject<List<Rapport>>(rapports);
 
             this.dtg.ItemsSource = rapportList;
-
+            test
         }
 
     }
