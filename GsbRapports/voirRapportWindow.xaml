@@ -7,14 +7,32 @@
         mc:Ignorable="d"
         Title="Voir les rapports" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Horizontal" Margin="0,124,0.333,172.667">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0.333,296.667">
             <TextBlock Text="Visiteur :" Margin="50,50,0,50" Width="50"/>
-            <ComboBox x:Name="cbxVisiteurs" Margin="10,45,10,45" Width="100"/>
+            <ComboBox x:Name="cbxVisiteurs" Margin="10,45,10,50" Width="100"/>
             <TextBlock Text="Date :" Width="35" Margin="0,50,0,50"/>
-            <TextBox x:Name="txtDate" Width="100" Margin="10,45,10,45"/>
+            <TextBox x:Name="txtDate" Width="100" Margin="10,45,10,50"/>
             <TextBlock Text="Date 2 :" Margin="0,50,0,50"/>
-            <TextBox x:Name="txtDate2" Width="100" Margin="10,45,10,45"/>
+            <TextBox x:Name="txtDate2" Width="100" Margin="10,45,10,50"/>
+            <Button x:Name="btnValider" Width="80"  Content="Valider" Margin="50,40,0,45" Click="btnValider_Click" />
         </StackPanel>
+        <DataGrid x:Name="dtg" AutoGenerateColumns="False" 
+                  Height="200" Margin="84,135,136.333,85.667"  AlternatingRowBackground = "LightBlue">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="idRapport"  
+                                    Binding="{Binding id}" Foreground="#FFF17B7B"/>
+                <DataGridTextColumn Header="Date" 
+                                    Binding="{Binding date}"  />
+                <DataGridTextColumn Header="Motif du rapport" 
+                                    Binding="{Binding motif}" />
+                <DataGridTextColumn Header="Bilan" 
+                                    Binding="{Binding bilan}" />
+                <DataGridTextColumn Header="IdMedecin" 
+                                    Binding="{Binding idMedecin}" />
+                <DataGridTextColumn Header="idVisiteur" 
+                                    Binding="{Binding idVisiteur}" />
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>

@@ -54,5 +54,28 @@ namespace GsbRapports
 
 
         }
+
+        private void btnValider_Click(object sender, RoutedEventArgs e)
+        {
+            string idVisiteur = ((Visiteur)this.cbxVisiteurs.SelectedItem).id.ToString();
+            string d1 = (this.txtDate.Text);
+            string d2 = (this.txtDate2.Text);
+
+            string url = this.site + "rapports?ticket=" + this.laSecretaire.getHashTicketMdp() + "&idVisiteur=" + idVisiteur+ "&dateDebut=" + d1 + "&dateFin=" + d2 ;
+            string reponse = this.wb.DownloadString(url);
+            dynamic d = JsonConvert.DeserializeObject(reponse);
+
+            string ticket = d.ticket;
+            this.laSecretaire.ticket = ticket;
+
+            string rapports = d.rapports.ToString();
+
+
+            List<Rapport> rapportList = JsonConvert.DeserializeObject<List<Rapport>>(rapports);
+
+            this.dtg.ItemsSource = rapportList;
+
+        }
+
     }
 }
