@@ -44,7 +44,7 @@ namespace GsbRapports
             string ticket = d.ticket;
             this.laSecretaire.ticket = ticket;
 
-            string visiteurs = d.visiteurs.ToString();
+            string visiteurs = d.visiteurs.ToString(); 
 
 
             List<Visiteur> v = JsonConvert.DeserializeObject<List<Visiteur>>(visiteurs);
