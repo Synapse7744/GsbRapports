@@ -1,0 +1,57 @@
+﻿<Window x:Class="GsbRapports.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GsbRapports"
+        mc:Ignorable="d"
+        Title="GSB gestion des rapports de visites" Height="450" Width="800" Icon="gsb.jpg" HorizontalAlignment="Center">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" x:Name="DckMenu" >
+                <MenuItem Header="_Fichier">
+                    <MenuItem Header="_Quitter"/>
+                </MenuItem>
+                <MenuItem Header="_Médecins">
+
+                </MenuItem>
+                <MenuItem Header="_Visites">
+
+                </MenuItem>
+                <MenuItem Header="_médicaments">
+
+                </MenuItem>
+                <MenuItem Header="_visiteurs">
+                    <MenuItem Header="_VoirLesRapports" Click="MenuItem_Click_3"/>
+
+                </MenuItem>
+                <MenuItem Header="_Familles">
+                    <MenuItem Header="_Voir" Click="MenuItem_Click"/>
+                    <MenuItem Header="_Modifier" Click="MenuItem_Click_1" />
+                    <MenuItem Header="_Ajouter" Click="MenuItem_Click_2" />
+                </MenuItem>
+
+            </Menu>
+
+
+        </DockPanel>
+        <TextBox x:Name="txtBonjour" Width="150" Height="30" Margin="50,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FFADE693"/>
+        <StackPanel  Orientation ="Horizontal" Margin="0,100,0,0" >
+            <StackPanel Height="100" Margin="0" x:Name="stPanel">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Login" Margin="20,0,0,0"/>
+                    <TextBox x:Name ="txtLogin" Width="50" Margin="60,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Mot de passe" Margin="20,0,0,0"/>
+                    <PasswordBox x:Name ="txtMdp" Width="50" Margin="20,0,0,0"/>
+                    <Button x:Name="btnValider" Margin="30,0,0,0" Width="50" Content="Valider" Click="btnValider_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+            <Image Height="200" Width="241" Source="gsb.jpg" Margin="80,50,600,59" x:Name="imgLogo" />
+        </StackPanel>
+       
+
+    </Grid>
+</Window>

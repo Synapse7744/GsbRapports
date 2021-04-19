@@ -1,0 +1,20 @@
+﻿<Window x:Class="GsbRapports.voirRapportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GsbRapports"
+        mc:Ignorable="d"
+        Title="Voir les rapports" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="0,124,0.333,172.667">
+            <TextBlock Text="Visiteur :" Margin="50,50,0,50" Width="50"/>
+            <ComboBox x:Name="cbxVisiteurs" Margin="10,45,10,45" Width="100"/>
+            <TextBlock Text="Date :" Width="35" Margin="0,50,0,50"/>
+            <TextBox x:Name="txtDate" Width="100" Margin="10,45,10,45"/>
+            <TextBlock Text="Date 2 :" Margin="0,50,0,50"/>
+            <TextBox x:Name="txtDate2" Width="100" Margin="10,45,10,45"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
