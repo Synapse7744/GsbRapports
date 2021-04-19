@@ -17,20 +17,16 @@
             <Button x:Name="btnValider" Width="80"  Content="Valider" Margin="50,40,0,45" Click="btnValider_Click" />
         </StackPanel>
         <DataGrid x:Name="dtg" AutoGenerateColumns="False" 
-                  Height="200" Margin="84,135,136.333,85.667"  AlternatingRowBackground = "LightBlue">
+                  Height="200" Margin="31,135,30.333,85.667"  AlternatingRowBackground = "LightBlue">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="idRapport"  
-                                    Binding="{Binding id}" Foreground="#FFF17B7B"/>
                 <DataGridTextColumn Header="Date" 
                                     Binding="{Binding date}"  />
                 <DataGridTextColumn Header="Motif du rapport" 
                                     Binding="{Binding motif}" />
                 <DataGridTextColumn Header="Bilan" 
                                     Binding="{Binding bilan}" />
-                <DataGridTextColumn Header="IdMedecin" 
-                                    Binding="{Binding idMedecin}" />
-                <DataGridTextColumn Header="idVisiteur" 
-                                    Binding="{Binding idVisiteur}" />
+                <DataGridTextColumn Header="Nom du Médecin" 
+                                    Binding="{Binding nomMedecin}" />
             </DataGrid.Columns>
         </DataGrid>
 
