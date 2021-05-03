@@ -15,6 +15,9 @@ namespace dllRapportVisites
         public string adresse { get; set; }
         public string cp { get; set; }
         public DateTime dateEmbauche { get; set; }
+        public string nomPrenom { get { return this.nom + " " + this.prenom; } }
+        
+
         public Visiteur(string id, string nom, string ville, string adresse, string cp, string prenom, DateTime date)
         {
             this.adresse = adresse;
@@ -24,7 +27,10 @@ namespace dllRapportVisites
             this.cp = cp;
             this.ville = ville;
             this.dateEmbauche = date;
+            
 
         }
+       
+        
     }
 }

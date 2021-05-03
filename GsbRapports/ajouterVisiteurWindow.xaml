@@ -1,0 +1,42 @@
+﻿<Window x:Class="GsbRapports.ajouterVisiteurWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GsbRapports"
+        mc:Ignorable="d"
+        Title="ajouterVisiteurWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="50,100,0,0" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="id : "/>
+                <TextBox x:Name="txtId" Width="80" Margin="20,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nom : "/>
+                <TextBox x:Name="txtNom" Width="80" Margin="20,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Prenom : "/>
+                <TextBox x:Name="txtPrenom" Width="80" Margin="20,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Adresse : "/>
+                <TextBox x:Name="txtAdresse" Width="250" Margin="20,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="CP : "/>
+                <TextBox x:Name="txtCp" Width="80" Margin="20,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Ville : "/>
+                <TextBox x:Name="txtVille" Width="150" Margin="20,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="DateEmbauche : "/>
+                <TextBox x:Name="txtDateEmbauche" Width="80" Margin="20,0,0,0" />
+            </StackPanel>
+            <Button x:Name="btnAjouter" Width="80" Content="Ajouter" Click="btnAjouter_Click_1" />
+        </StackPanel>
+    </Grid>
+</Window>

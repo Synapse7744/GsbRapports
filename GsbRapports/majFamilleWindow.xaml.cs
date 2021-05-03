@@ -51,21 +51,45 @@ namespace GsbRapports
             List<Famille> f = JsonConvert.DeserializeObject<List<Famille>>(familles);
 
             this.cmbFamille.ItemsSource = f;
-            this.cmbFamille.DisplayMemberPath = "libelle";
+            this.cmbFamille.DisplayMemberPath ="idLibelle";
+
+
 
         }
 
 
         private void btnValider_Click_1(object sender, RoutedEventArgs e)
         {
-            string idFamille = ((Famille)cmbFamille.SelectedItem).id.ToString();
             string newLibelle = txtLibFamille.Text;
-            string url = this.site + "famille/";
+            string idFamille = ((Famille)cmbFamille.SelectedItem).id;
+            try
+            {
+                string url = this.site + "famille/";
 
-            NameValueCollection parametres = new NameValueCollection();
-            parametres.Add("ticket", this.laSecretaire.getHashTicketMdp());
-            parametres.Add("id", idFamille);
-            parametres.Add("libelle", newLibelle);
+                NameValueCollection parametres = new NameValueCollection();
+                parametres.Add("ticket", this.laSecretaire.getHashTicketMdp());
+                parametres.Add("idFamille", idFamille);
+                parametres.Add("libelle", newLibelle);
+
+                byte[] tabByte = this.wb.UploadValues(url, "POST", parametres);
+                string reponse = UnicodeEncoding.UTF8.GetString(tabByte);
+                string ticket = reponse.Substring(2, reponse.Length-2);
+                this.laSecretaire.ticket = ticket;
+
+            }
+            catch(WebException ex)
+            {
+                if (ex.Response is HttpWebResponse)
+                    MessageBox.Show(((HttpWebResponse)ex.Response).StatusCode.ToString());
+
+            }
+            
+
+
+
+ 
+
+
         }
     }
 }

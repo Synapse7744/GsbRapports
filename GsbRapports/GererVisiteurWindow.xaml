@@ -1,0 +1,40 @@
+﻿<Window x:Class="GsbRapports.GererVisiteurWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:local="clr-namespace:GsbRapports"
+mc:Ignorable="d"
+Title="GererVisiteurWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel RenderTransformOrigin="0.436,0.501">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10,50,0,0" Text="Les Visiteurs" />
+                <ComboBox Name="cbxVisiteursNom" Margin="50,50,50,0" Width="80"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="200,50,100,0" Height="30">
+                <TextBlock Text="Nom : " />
+                <TextBlock x:Name = "txtNom" Height="30" Margin="20,0,0,0"
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding nom}"/>
+                <TextBlock Text="Prenom : " Margin="30,0,0,0"/>
+                <TextBlock x:Name = "txtPrenom" Height="30" Margin="10,0,0,0"
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding prenom}"/>
+                <TextBlock Text="Date d'embauche : " Margin="20,0,0,0"/>
+                <TextBlock x:Name = "txtEmbauche"  Margin="10,0,0,0"
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding dateEmbauche}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="200,50,100,0">
+                <TextBlock Text="Adresse : " Width="50"/>
+                <TextBox x:Name="txtAdresse" Width="150" Margin="10,0,10,0"
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding adresse}" />
+                <TextBlock Text="CP : " Width="30" Margin="10,0,0,0"/>
+                <TextBox x:Name="txtCp" Width="50" Margin="0,0,30,0"
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding cp}" />
+                <TextBlock Text="Ville : " Width="40"/>
+                <TextBox x:Name="txtVille" Width="75"
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding ville}" />
+            </StackPanel>
+            <Button x:Name="btnValider" Margin="0,50,0,0" Content="Valider" Width="60" HorizontalAlignment="Center" Click="btnValider_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -11,6 +11,7 @@ namespace dllRapportVisites
         public string motif { get; set; }
         public string bilan { get; set; }
         public DateTime date { get; set; }
+
         public int idMedecin { get; set; }
         public string idVisiteur { get; set; }
      //   public List<Medicament> medicaments { get; set; }

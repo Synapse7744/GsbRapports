@@ -23,6 +23,9 @@
                 </MenuItem>
                 <MenuItem Header="_visiteurs">
                     <MenuItem Header="_VoirLesRapports" Click="MenuItem_Click_3"/>
+                    <MenuItem Header="_gererVisiteurs" Click="MenuItem_Click_4"/>
+                    <MenuItem Header="_AjoutVisiteur" Click="MenuItem_Click_5"/>
+                    
 
                 </MenuItem>
                 <MenuItem Header="_Familles">

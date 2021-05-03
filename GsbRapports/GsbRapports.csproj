@@ -59,11 +59,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ajouterVisiteurWindow.xaml.cs">
+      <DependentUpon>ajouterVisiteurWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ajoutFamilleWindow.xaml.cs">
       <DependentUpon>ajoutFamilleWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GererVisiteurWindow.xaml.cs">
+      <DependentUpon>GererVisiteurWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="majFamilleWindow.xaml.cs">
       <DependentUpon>majFamilleWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="rapportXmlWindow.xaml.cs">
+      <DependentUpon>rapportXmlWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="VoirFamillesWindow.xaml.cs">
       <DependentUpon>VoirFamillesWindow.xaml</DependentUpon>
@@ -71,7 +80,15 @@
     <Compile Include="voirRapportWindow.xaml.cs">
       <DependentUpon>voirRapportWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ajouterVisiteurWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ajoutFamilleWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GererVisiteurWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,6 +105,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="majFamilleWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="rapportXmlWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,6 +10,9 @@ namespace dllRapportVisites
     {
         public string id { get; set; }
         public string libelle { get; set; }
+        public string idLibelle { 
+            get { return id + " " + libelle; }
+        }
         public Famille(string id, string lib)
         {
             this.id = id;

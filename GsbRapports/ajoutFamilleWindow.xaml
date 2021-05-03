@@ -18,7 +18,7 @@
                 <TextBox x:Name="txtLibelle" Margin="50,0,0,0" Width="60"/>
 
             </StackPanel>
-            <Button x:Name="btnValider" Content="Ajouter" Width="50" HorizontalAlignment="Center"/>
+            <Button x:Name="btnValider" Content="Ajouter" Width="50" HorizontalAlignment="Center" Click="btnValider_Click"/>
         </StackPanel>
     </Grid>
 </Window>
