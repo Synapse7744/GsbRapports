@@ -26,15 +26,15 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="CP : "/>
-                <TextBox x:Name="txtCp" Width="80" Margin="20,0,0,0" />
+                <TextBox x:Name="txtCp" Width="80" Margin="20,0,0,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Ville : "/>
                 <TextBox x:Name="txtVille" Width="150" Margin="20,0,0,0" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="DateEmbauche : "/>
-                <TextBox x:Name="txtDateEmbauche" Width="80" Margin="20,0,0,0" />
+                <TextBlock Text="Embauche : "/>
+                <DatePicker x:Name="txtDateEmbauche" Margin="20,0,0,0"/>
             </StackPanel>
             <Button x:Name="btnAjouter" Width="80" Content="Ajouter" Click="btnAjouter_Click_1" />
         </StackPanel>

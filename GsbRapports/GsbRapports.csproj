@@ -68,6 +68,7 @@
     <Compile Include="GererVisiteurWindow.xaml.cs">
       <DependentUpon>GererVisiteurWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListeRapport.cs" />
     <Compile Include="majFamilleWindow.xaml.cs">
       <DependentUpon>majFamilleWindow.xaml</DependentUpon>
     </Compile>

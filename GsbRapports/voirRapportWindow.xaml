@@ -19,7 +19,7 @@
                   Height="200" Margin="31,135,30.333,85.667"  AlternatingRowBackground = "LightBlue">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date" 
-                                    Binding="{Binding date}"  />
+                                    Binding="{Binding d}"  />
                 <DataGridTextColumn Header="Motif du rapport" 
                                     Binding="{Binding motif}" />
                 <DataGridTextColumn Header="Bilan" 
@@ -28,7 +28,8 @@
                                     Binding="{Binding nomMedecin}" />
             </DataGrid.Columns>
         </DataGrid>
-       
+
+        <Button x:Name="btnXml" Content="XML" Margin="662,356,30.333,27.667" Click="btnXml_Click" />
 
 
     </Grid>

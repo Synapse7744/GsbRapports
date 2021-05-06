@@ -31,6 +31,7 @@ namespace GsbRapports
         private WebClient wb;
         private string site;
         private Secretaire laSecretaire;
+        private List<Rapport>lesRapports;
         public voirRapportWindow(WebClient wb, string site, Secretaire laSecretaire)
         {
             InitializeComponent();
@@ -92,6 +93,7 @@ namespace GsbRapports
                 string rapports = d.rapports.ToString();
                 List<Rapport> rapportList = JsonConvert.DeserializeObject<List<Rapport>>(rapports);
                 this.dtg.ItemsSource = rapportList;
+                this.lesRapports = rapportList;
 
             }
                 catch (WebException ex)
@@ -103,9 +105,9 @@ namespace GsbRapports
         }
 
 
-        private void btnXml_Click_1(object sender, RoutedEventArgs e)
+        private void btnXml_Click(object sender, RoutedEventArgs e)
         {
-            string idVisiteur = ((Visiteur)this.cbxVisiteurs.SelectedItem).id.ToString();
+            /*string idVisiteur = ((Visiteur)this.cbxVisiteurs.SelectedItem).id.ToString();
             string date1 = this.date1.SelectedDate.Value.ToString("yyyy-MM-dd");
             string date2 = this.date2.SelectedDate.Value.ToString("yyyy-MM-dd");
 
@@ -116,12 +118,18 @@ namespace GsbRapports
             string ticket = d.ticket;
             this.laSecretaire.ticket = ticket;
 
-            string rapports = d.rapports.ToString();
-            List<Rapport> rapportList = JsonConvert.DeserializeObject<List<Rapport>>(rapports);
+           string rapports = d.rapports.ToString();
+            List<Rapport> rapportList = JsonConvert.DeserializeObject<List<Rapport>>(rapports);*/
+
+
+            ListeRapport r = new ListeRapport();
+            r.lesRapports = this.lesRapports;
 
             FileStream f = new FileStream("listeRapport.xml", FileMode.Create);
-            XmlSerializer x = new XmlSerializer(rapportList.GetType());
-            x.Serialize(f, rapportList);
+            XmlSerializer x = new XmlSerializer(r.GetType());
+            x.Serialize(f, r);
+            MessageBox.Show("Bravo !!!");
+
         }
     }
 }

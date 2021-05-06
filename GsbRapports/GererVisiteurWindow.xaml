@@ -21,7 +21,7 @@ DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Bi
 DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding prenom}"/>
                 <TextBlock Text="Date d'embauche : " Margin="20,0,0,0"/>
                 <TextBlock x:Name = "txtEmbauche"  Margin="10,0,0,0"
-DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding dateEmbauche}"/>
+DataContext="{Binding ElementName=cbxVisiteursNom, Path=SelectedItem}" Text="{Binding dEmbauche}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="200,50,100,0">
                 <TextBlock Text="Adresse : " Width="50"/>

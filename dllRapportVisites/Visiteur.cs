@@ -15,6 +15,8 @@ namespace dllRapportVisites
         public string adresse { get; set; }
         public string cp { get; set; }
         public DateTime dateEmbauche { get; set; }
+        public string dEmbauche { get { return this.dateEmbauche.ToShortDateString(); } }
+
         public string nomPrenom { get { return this.nom + " " + this.prenom; } }
         
 

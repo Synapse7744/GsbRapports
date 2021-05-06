@@ -10,8 +10,8 @@ namespace dllRapportVisites
     {
         public string motif { get; set; }
         public string bilan { get; set; }
-        public DateTime date { get; set; }
-
+        public DateTime date { get ; set; }
+        public string d { get { return this.date.ToShortDateString(); }}
         public int idMedecin { get; set; }
         public string idVisiteur { get; set; }
      //   public List<Medicament> medicaments { get; set; }
@@ -19,7 +19,7 @@ namespace dllRapportVisites
         public string prenomVisiteur { get; set; }
         public string nomMedecin { get; set; }
         public string prenomMedecin { get; set; }
-        public Rapport(string motif, string bilan, DateTime date, string nomVisiteur, string prenomVisiteur, string nomMedecin, string prenomMedecin)
+       /* public Rapport(string motif, string bilan, DateTime date, string nomVisiteur, string prenomVisiteur, string nomMedecin, string prenomMedecin)
         {
             this.motif = motif;
             this.bilan = bilan;
@@ -29,7 +29,7 @@ namespace dllRapportVisites
             this.prenomVisiteur = prenomVisiteur;
             this.nomVisiteur = nomVisiteur;
             
-        }
+        }*/
 
     }
 }
