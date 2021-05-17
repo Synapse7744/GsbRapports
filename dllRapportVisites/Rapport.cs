@@ -19,6 +19,7 @@ namespace dllRapportVisites
         public string prenomVisiteur { get; set; }
         public string nomMedecin { get; set; }
         public string prenomMedecin { get; set; }
+
        /* public Rapport(string motif, string bilan, DateTime date, string nomVisiteur, string prenomVisiteur, string nomMedecin, string prenomMedecin)
         {
             this.motif = motif;

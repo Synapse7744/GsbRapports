@@ -10,5 +10,6 @@ namespace GsbRapports
     public class ListeRapport
     {
         public List<Rapport> lesRapports { get; set; }
+
     }
 }

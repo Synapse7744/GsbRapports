@@ -80,6 +80,8 @@ namespace GsbRapports
                     string ticket = reponse.Substring(2, reponse.Length - 2);
                     this.laSecretaire.ticket = ticket;
 
+                MessageBox.Show("Modification effectuée");
+
         
                
             
